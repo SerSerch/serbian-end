@@ -1,0 +1,165 @@
+@import "../vars";
+
+@font-face {
+  font-family: 'TTNormsRegular';
+  src: url('../fonts/TTNorms-Regular.eot');
+  src: url('../fonts/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTNorms-Regular.woff') format('woff'),
+  url('../fonts/TTNorms-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTNormsMedium';
+  src: url('../fonts/TTNorms-Medium.eot');
+  src: url('../fonts/TTNorms-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTNorms-Medium.woff') format('woff'),
+  url('../fonts/TTNorms-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTNormsBold';
+  src: url('../fonts/TTNorms-Bold.eot');
+  src: url('../fonts/TTNorms-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTNorms-Bold.woff') format('woff'),
+  url('../fonts/TTNorms-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+img	{
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 320px;
+  min-height: 320px;
+  font-family: $default-font;
+  font-weight: 400;
+  color: $p-text-color;
+}
+
+.wrap-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.hero-text {
+  font-size: 42px;
+  line-height: 50px;
+  background: linear-gradient(0deg, #F0145A 100%, #EF8080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.caption-2 {
+  font-size: 32px;
+  line-height: 38px;
+  color: $main-color;
+}
+
+.caption-3 {
+  font-size: 24px;
+  line-height: 28px;
+  color: $main-color;
+}
+
+.caption-caps-3 {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $main-color;
+}
+
+.caption-4 {
+  font-size: 18px;
+  line-height: 21px;
+  color: $main-color;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 26px;
+  color: $p-text-color;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.un-list-item,
+.or-list-item {
+  position: relative;
+  padding-left: 36px;
+}
+
+.un-list-item:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 11px;
+  left: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $accept-color;
+}
+
+.or-list-item {
+  counter-reset: order-item;
+}
+
+.or-list-item:before {
+  display: block;
+  position: absolute;
+  counter-increment: order-item;
+  content: counters(order-item,".");
+  top: 0;
+  left: 0;
+  min-width: 26px;
+  min-height: 26px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: right;
+  color: $accept-color;
+}
+
+.link {
+  text-decoration: none;
+  outline: none;
+  color: $link-color;
+  font-weight: 400;
+  &:hover,
+  &:active,
+  &:focus,
+  &._active {
+    color: $accept-color;
+    cursor: pointer;
+  }
+}

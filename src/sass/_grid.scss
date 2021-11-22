@@ -1,0 +1,82 @@
+@import "vars";
+
+@mixin col($column) {
+  float: left;
+  width: 100%;
+  max-width: (100% / 12) * $column;
+}
+
+._container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+._row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+._col {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  @for $i from 3 to 13 {
+    &-sm-#{$i},
+    &-md-#{$i},
+    &-lg-#{$i},
+    &-xl-#{$i} {
+      @extend ._col;
+    }
+  }
+  @for $i from 3 to 13 {
+    &-#{$i} {
+      flex: 0 0 (100% / 12) * $i;
+      max-width: (100% / 12) * $i;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  ._col-sm {
+    @for $i from 3 to 13 {
+      &-#{$i} {
+        flex: 0 0 (100% / 12) * $i;
+        max-width: (100% / 12) * $i;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  ._col-md {
+    @for $i from 3 to 13 {
+      &-#{$i} {
+        flex: 0 0 (100% / 12) * $i;
+        max-width: (100% / 12) * $i;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  ._col-lg {
+    @for $i from 3 to 13 {
+      &-#{$i} {
+        flex: 0 0 (100% / 12) * $i;
+        max-width: (100% / 12) * $i;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  ._col-xl {
+    @for $i from 3 to 13 {
+      &-#{$i} {
+        flex: 0 0 (100% / 12) * $i;
+        max-width: (100% / 12) * $i;
+      }
+    }
+  }
+}
