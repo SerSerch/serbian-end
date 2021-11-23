@@ -10,6 +10,7 @@
   &-row {
     display: flex;
     position: relative;
+    justify-content: space-between;
     min-height: 65px;
   }
   &-logo-box {
@@ -21,9 +22,6 @@
   }
   &-logo {
     height: 62px;
-  }
-  &-space {
-    flex-grow: 1;
   }
   &-right {
     display: flex;
