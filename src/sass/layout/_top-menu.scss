@@ -1,0 +1,306 @@
+@import "../vars";
+
+.top-menu {
+  position: relative;
+  z-index: 100;
+  min-width: 320px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  &-row {
+    display: flex;
+    position: relative;
+    min-height: 65px;
+  }
+  &-logo-box {
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  &-logo {
+    height: 62px;
+  }
+  &-space {
+    flex-grow: 1;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &-info {
+    &-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: 4px;
+      padding-right: 20px;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      min-height: 24px;
+      position: relative;
+      padding-left: 26px;
+      font-size: 16px;
+      line-height: 19px;
+      box-sizing: border-box;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        background-color: $grey-separator-color;
+      }
+    }
+    &-phone {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    &-facebook {
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      &:before {
+        display: block;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/Facebook2.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &._s:before {
+        background-image: url(../images/Facebook1.svg);
+      }
+    }
+  }
+  &-language {
+    &-list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    &-item {
+      padding: 0;
+    }
+    &-link {
+      display: block;
+      padding: 5px 6px;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      &._active {
+        background-color: $accept-color;
+        color: $s-text-color;
+      }
+    }
+  }
+  &-checkbox,
+  &-button {
+    display: none;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin: 0;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  &-item {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  &-link {
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &-nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 414px) {
+  .top-menu {
+    top: 20px;
+    &-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-logo {
+      height: 31px;
+    }
+    &-button {
+      display: block;
+      position: absolute;
+      right: 13px;
+      bottom: 0;
+      height: 32px;
+      width: 32px;
+      box-sizing: border-box;
+      &._close {
+        z-index: 102;
+        top: 11px;
+        bottom: auto;
+      }
+      &:hover,
+      &:active {
+        cursor: pointer;
+      }
+      &-icon {
+        height: 100%;
+        width: 100%;
+        display: block;
+        vertical-align: middle;
+        position: relative;
+        text-align: left;
+        box-sizing: border-box;
+        &:before,
+        &:after {
+          content: '';
+          width: 18px;
+          height: 2px;
+          position: absolute;
+          right: 7px;
+          transform-origin: right;
+          transition: all 0.3s ease-in-out;
+        }
+        &:before {
+          top: 9px;
+          transform-origin: top right;
+          transform: rotate(0deg);
+          box-shadow: inset 0 0 0 18px $main-color, 0 6px $main-color;
+        }
+        &:after {
+          top: 21px;
+          transform-origin: bottom right;
+          transform: rotate(0deg);
+          box-shadow: inset 0 0 0 18px $main-color;
+        }
+        &._s:before {
+          box-shadow: inset 0 0 0 18px $s-text-color, 0 6px $s-text-color;
+        }
+        &._s:after {
+          box-shadow: inset 0 0 0 18px $s-text-color;
+        }
+      }
+    }
+
+    &-button._close &-button-icon {
+      &:before {
+        transform: rotate(-45deg);
+        box-shadow: inset 0 0 0 18px $main-color, 0 0;
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+    &-nav {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      justify-content: flex-end;
+      transform: translateY(-100%);
+      transition: all 0s ease-in-out 0.3s;
+    }
+    &-background {
+      width: 100%;
+      background-color: rgba(15, 7, 42, 0.3);
+      opacity: 0;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    &-list {
+      position: absolute;
+      z-index: 101;
+      width: 100%;
+      max-width: 320px;
+      min-width: 320px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 50px 0 20px;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: all 0.3s ease-in-out;
+      background-color: $background-color;
+    }
+    &-item {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    &-checkbox:checked ~ &-nav {
+      transform: translateY(0);
+      transition: all 0s ease-in-out;
+    }
+    &-checkbox:checked ~ &-nav &-background {
+      opacity: 1;
+    }
+    &-checkbox:checked ~ &-nav &-list {
+      transform: translateX(0);
+    }
+    &-checkbox:checked ~ &-nav &-user,
+    &-checkbox:checked ~ &-nav &-button {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &-link {
+      color: $main-color;
+      padding: 7px 15px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    &-right {
+      width: 100%;
+      order: -1;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+    &-info {
+      &-box {
+        width: 100%;
+        padding: 0 20px;
+        justify-content: space-between;
+      }
+      &-item {
+        padding: 0;
+        &:before {
+          display: none;
+        }
+        &.m-hidden {
+          display: none;
+        }
+      }
+    }
+  }
+}

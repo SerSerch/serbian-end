@@ -35,18 +35,6 @@ module.exports = {
         }
       },
       {
-        test: /\.(svg|gif|png|jpe?g)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'img',
-            }
-          },
-        ]
-      },
-      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -82,7 +70,6 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'pages', page),
       filename: `${page}`,
       minify: false,
-      inject: false,
     })),
     new MiniCssExtractPlugin({
       filename: 'style.css',

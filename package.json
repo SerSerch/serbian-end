@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "rimraf ./dist && webpack --mode production"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
