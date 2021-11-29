@@ -9,7 +9,6 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 .idea/
-dist/
 
 #dotenv environment variables file
 .env

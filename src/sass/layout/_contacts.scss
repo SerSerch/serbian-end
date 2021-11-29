@@ -1,0 +1,86 @@
+@import "../vars";
+
+.wrap-col-small {
+  font-family: sans-serif;
+}
+
+.map {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.wrapping {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wrapping-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapping-col-big {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.wrapping-col-small {
+  flex: 0 0 35%;
+  max-width: 35%;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  padding: 20px;
+  position: relative;
+  align-items: stretch;
+  background-color: #F5F5FA;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+.form #name,
+.form #telNumb,
+.form #eMail {
+  font-family: 'TTNorms-Regular';
+  outline: none;
+  font-size: 18px;
+  line-height: 26px;
+  color: #B3B3BA;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  margin-bottom: 20px;
+}
+
+.form #textArea {
+  font-family: 'TTNorms-Regular';
+  resize: vertical;
+  font-size: 18px;
+  outline: none;
+  line-height: 26px;
+  color: #B3B3BA;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form label[for=telNumb] {
+  font-family: 'TTNorms-Bold';
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-indent: 15px;
+  outline: none;
+  padding-bottom: 10px;
+}

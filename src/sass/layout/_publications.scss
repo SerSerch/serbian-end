@@ -1,0 +1,52 @@
+@import "../vars";
+
+.articles-items {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.articles-items .btn-blue {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.articles-table {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.btn-tabs {
+  min-width: 260px;
+  width: auto;
+  background-color: #E6E6F0;
+  border-radius: 12px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.btn-nav {
+  font-family: 'TTNorms-Medium';
+  max-width: 130px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+.btn-nav.active {
+  max-width: 130px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: white;
+  border: solid #E6E6F0;
+  border-radius: 12px;
+  margin: auto;
+}

@@ -1,3 +1,8 @@
+$lg: 1199px;
+$md: 991px;
+$sm: 767px;
+$xs: 575px;
+
 $default-font: "TTNormsRegular", sans-serif;
 
 $background-color: #ffffff;
@@ -19,3 +24,7 @@ $grey-bg-color: #F5F5FA;
 $grey-alt-color: #EDEDF7;
 $grey-text-color: #B3B3BA;
 $grey-separator-color: #E6E6F0;
+
+$grid-1: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$grid-2: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$grid-3: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);

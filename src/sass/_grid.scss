@@ -1,8 +1,7 @@
 @import "vars";
 
 @mixin col($column) {
-  float: left;
-  width: 100%;
+  flex: 0 0 (100% / 12) * $column;
   max-width: (100% / 12) * $column;
 }
 
@@ -29,54 +28,51 @@
       @extend ._col;
     }
   }
+}
+
+._col-xl {
   @for $i from 3 to 13 {
     &-#{$i} {
-      flex: 0 0 (100% / 12) * $i;
-      max-width: (100% / 12) * $i;
+      @include col($i);
     }
   }
 }
 
-@media (min-width: 576px) {
-  ._col-sm {
-    @for $i from 3 to 13 {
-      &-#{$i} {
-        flex: 0 0 (100% / 12) * $i;
-        max-width: (100% / 12) * $i;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  ._col-md {
-    @for $i from 3 to 13 {
-      &-#{$i} {
-        flex: 0 0 (100% / 12) * $i;
-        max-width: (100% / 12) * $i;
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) {
+@media (max-width: $lg) {
   ._col-lg {
     @for $i from 3 to 13 {
       &-#{$i} {
-        flex: 0 0 (100% / 12) * $i;
-        max-width: (100% / 12) * $i;
+        @include col($i);
       }
     }
   }
 }
 
-@media (min-width: 1440px) {
-  ._col-xl {
+@media (max-width: $md) {
+  ._col-md {
     @for $i from 3 to 13 {
       &-#{$i} {
-        flex: 0 0 (100% / 12) * $i;
-        max-width: (100% / 12) * $i;
+        @include col($i);
       }
     }
+  }
+}
+
+@media (max-width: $sm) {
+  ._col-sm {
+    @for $i from 3 to 13 {
+      &-#{$i} {
+        @include col($i);
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  ._col-6 {
+    @include col(6);
+  }
+  ._col-12 {
+    @include col(12);
   }
 }

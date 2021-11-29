@@ -1,0 +1,63 @@
+@import "../vars";
+
+.footer {
+  border-top: 4px solid #E6E6F0;
+  background-color: #F5F5FA;
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0 40px;
+  }
+  &-wrapper {
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 40%;
+    flex-direction: column;
+  }
+  &-contacts {
+    font-family: 'TTNorms-Medium';
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &-contacts:not(:nth-child(2)) {
+    margin-bottom: 15px;
+  }
+  & .fot-nav {
+    color: #24A3FF;
+  }
+  & .fot-nav::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #B3B3BA;
+    position: absolute;
+    top: 30%;
+    left: -15px;
+  }
+  & .tel {
+    position: relative;
+  }
+  & .tel::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #B3B3BA;
+    position: absolute;
+    top: 40%;
+    left: -10px;
+  }
+  & .tel::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #B3B3BA;
+    position: absolute;
+    top: 40%;
+    right: -15px;
+  }
+}

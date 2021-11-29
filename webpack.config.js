@@ -1,6 +1,7 @@
 const path = require('path'),
   fs = require('fs'),
   HTMLplugin = require('html-webpack-plugin'),
+  CopyPlugin = require('copy-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
   UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
   OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -16,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
+    clean: true,
   },
   devServer: {
     static: {
@@ -35,22 +36,26 @@ module.exports = {
         }
       },
       {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext]',
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
+          'css-loader',
           'postcss-loader',
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
+          'sass-loader',
         ],
       },
     ]
@@ -71,6 +76,14 @@ module.exports = {
       filename: `${page}`,
       minify: false,
     })),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src', 'images'),
+          to: path.join(__dirname, 'dist', 'img'),
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),

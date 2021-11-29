@@ -1,0 +1,45 @@
+@import "../vars";
+
+.team {
+  margin-bottom: 80px;
+  & .wrap-col-small {
+    padding: 0;
+  }
+  &-contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #E6E6F0;
+    padding: 10px 0 20px;
+    margin-bottom: 40px;
+  }
+  & .contact-link {
+    margin-left: 26px;
+    position: relative;
+  }
+  & .contact-link:nth-child(2)::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E6E6F0;
+    position: absolute;
+    top: 40%;
+    right: -15px;
+  }
+  & .contact-link:nth-child(2)::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E6E6F0;
+    position: absolute;
+    top: 40%;
+    left: -15px;
+  }
+  &-sector {
+    max-width: 864px;
+    margin: 0 auto 80px;
+  }
+}
+

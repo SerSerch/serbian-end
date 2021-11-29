@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Contacts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<svg style="display: none;">
+  <symbol id="facebook" viewBox="0 0 24 24">
+    <g>
+      <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="header">
+  <div class="container-1350">
+    <div class="internal_header">
+      <div class="information-contacts information-contacts__main">
+        <ul class="languages">
+          <li><a class="language active" href="#">УК</a></li>
+          <li><a class="language language__main" href="#">РУ</a></li>
+          <li><a class="language language__main" href="#">EN</a></li>
+        </ul>
+
+        <div class="header_contacts">
+          <p class="address">Одеса, Адміральський пр., 3</p>
+          <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91</a>
+          <a href="https://www.facebook.com/" class="header_link">
+            <svg class="header_icon header_icon__main">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="head_wrap">
+        <div class="logo_start">
+          <a href="#" class="logo_start__main">
+            <img src="images/logo-black.png" alt="#"></a>
+          <a class="logo_head__nav" href="#">контакти</a>
+          <img src="images/logo-w.png" alt="#">
+        </div>
+        <ul class="contacts_menu">
+          <li class="nav_link nav_link__main"><a href="#">о нас</a></li>
+          <li class="nav_link nav_link__main"><a href="#">послуги</a></li>
+          <li class="nav_link nav_link__main"><a href="#">команда</a></li>
+          <li class="nav_link nav_link__main"><a href="#">публікації</a></li>
+          <li class="nav_link nav_link__main active"><a href="#">контакти</a></li>
+        </ul>
+        <button class="hamburger" type="button"></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="section">
+  <div class="contacts">
+    <div class="container-1350">
+      <div class="wrapping">
+        <div class="wrapping_col wrapping_col__small">
+          <p class="contacts_text">Одеса, Адміральський пр., 3</p>
+          <a href="tel:+380503901591" class="contacts_text">+38 (050) 390 15 95</a>
+          <a href="mailto:contact@hlegals.net" class="contact_link contact_link__big">contact@hlegals.net</a>
+          <a href="#" class="contacts_link"><svg class="main_icon"><use xlink:href="#facebook"></use></svg><span>Наша сторінка<br>в фейсбуці</span></a>
+        </div>
+
+        <div class="wrapping_col wrapping_col__big">
+          <form action="#" class="form">
+            <p class="gradient_for_title">Ми хотіли б Вам допомогти</p>
+            <input type="text" id="name" placeholder="Iм’я" required>
+            <textarea name="formArea" id="textArea" cols="8" rows="8" placeholder="Повідомлення"></textarea>
+            <label for="telNumb">Як вам відповісти?</label>
+            <input type="tel" id="telNumb" placeholder="+38 (0__) ___-__-__" pattern="^\+38 \d{3} \d{3} \d{2} \d{2}$" minlength=10 required>
+            <input type="email" id="eMail" placeholder="Чи email" required>
+            <input type="submit" value="Надіслати запит" class="btn btn__blue">
+          </form>
+        </div>
+      </div>
+    </div>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.6382809299666!2d30.737941415746203!3d46.43604867609003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63396894457b7%3A0x7f6c5236cbcb70c8!2z0JDQtNC80LjRgNCw0LvRjNGB0LrQuNC5INC_0YDQvtGB0L8uLCAzLCDQntC00LXRgdGB0LAsINCe0LTQtdGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDY1MDAw!5e0!3m2!1sru!2sua!4v1623509931192!5m2!1sru!2sua" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container-1350">
+    <div class="footer_inner">
+      <div class="footer_wrapper">
+        <div class="footer_contacts">
+          <p>Одеса, Адміральський пр., 3</p>
+          <a href="contacts.html" class="page_nav">Подивитися на мапі</a>
+        </div>
+        <div class="footer_contacts">
+          <a href="https://www.facebook.com/" class="social_link" target="_blank"><svg class="main_icon"><use xlink:href="#facebook"></use></svg></a>
+          <a href="tel:+380503901591" class="tel">+38 (050) 390 15 91 </a>
+          <a href="mailto:contact@hlegals.net" class="contact_link contact_link__bold" target="blank">contact@hlegals.net</a>
+        </div>
+      </div>
+      <p class="hlegals-s">©2021 ТОВ Юридична компанія «HLEGALS»</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
