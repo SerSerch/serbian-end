@@ -1,0 +1,55 @@
+@import "../vars";
+
+.services {
+  padding-bottom: 22px;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-caption {
+    position: relative;
+    padding-right: 12px;
+    margin-bottom: 3px;
+    color: $s-text-color;
+    opacity: 0.5;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      width: 7px;
+      height: 12px;
+      background-image: url(../images/Caption-Icon1.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+  }
+  &-hero {
+    margin-bottom: 68px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 58px;
+  }
+  &-image-box {
+    width: 92px;
+    height: 92px;
+    margin-bottom: 20px;
+  }
+  &-image {
+    width: 100%;
+    height: 100%;
+  }
+  &-title {
+    color: $link-color;
+    margin-bottom: 15px;
+  }
+  &-text {
+    color: $s-text-color;
+  }
+}

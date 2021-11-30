@@ -1,63 +1,83 @@
 @import "../vars";
 
 .footer {
-  border-top: 4px solid #E6E6F0;
-  background-color: #F5F5FA;
-  &-inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 0 40px;
-  }
-  &-wrapper {
-    display: flex;
-    flex: 0 0 40%;
-    max-width: 40%;
-    flex-direction: column;
+  background-color: $grey-bg-color;
+  &-box {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 18px;
+    align-items: flex-start;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: $padding-column;
+      right: $padding-column;
+      height: 4px;
+      background-color: $grey-separator-color;
+    }
   }
   &-contacts {
-    font-family: 'TTNorms-Medium';
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 22px;
   }
-  &-contacts:not(:nth-child(2)) {
-    margin-bottom: 15px;
+  &-copy {
+    text-align: right;
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey-text-color;
   }
-  & .fot-nav {
-    color: #24A3FF;
+  &-adress {
+    font-size: 16px;
+    line-height: 19px;
+    color: $main-color;
   }
-  & .fot-nav::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #B3B3BA;
-    position: absolute;
-    top: 30%;
-    left: -15px;
+  &-map {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $link-color;
   }
-  & .tel {
-    position: relative;
+  &-facebook {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    &:before {
+      display: block;
+      content: '';
+      width: 38px;
+      height: 38px;
+      background-image: url(../images/Facebook3.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
-  & .tel::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #B3B3BA;
-    position: absolute;
-    top: 40%;
-    left: -10px;
+  &-phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $main-color;
   }
-  & .tel::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #B3B3BA;
-    position: absolute;
-    top: 40%;
-    right: -15px;
+  &-email {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $link-color;
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    &-contacts {
+      justify-content: center;
+    }
+    &-copy {
+      text-align: center;
+    }
   }
 }

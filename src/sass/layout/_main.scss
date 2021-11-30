@@ -35,7 +35,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: $main-color;
+  background-color: $background-color;
 }
 
 img	{
@@ -69,8 +69,10 @@ p {
 
 .hero-text {
   font-size: 42px;
+  font-weight: 700;
   line-height: 50px;
-  background: linear-gradient(0deg, #F0145A 100%, #EF8080 100%);
+  color: $accept-color;
+  background: $gradient-hero;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -104,6 +106,12 @@ p {
 .paragraph {
   font-size: 18px;
   line-height: 26px;
+  color: $p-text-color;
+}
+
+.paragraph-min {
+  font-size: 16px;
+  line-height: 22px;
   color: $p-text-color;
 }
 
@@ -162,6 +170,76 @@ p {
     color: $accept-color;
     cursor: pointer;
   }
+}
+
+.anchor {
+  width: 0;
+  height: 0;
+  transform: translateY(-70px);
+}
+
+.separator {
+  position: relative;
+  padding-left: 26px;
+  box-sizing: border-box;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: $grey-separator-color;
+  }
+}
+
+.button,
+.input {
+  width: 100%;
+  min-width: 280px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 12px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  transition: all .7s ease;
+}
+
+.button {
+  max-width: 290px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: $s-text-color;
+  background-color: $link-color;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus,
+  &:active,
+  &:hover {
+
+  }
+  &:disabled,
+  &:disabled:before {
+
+  }
+}
+
+.input {
+  max-width: 496px;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: $background-color;
+  border: none;
+  font-weight: 400;
 }
 
 ._p {

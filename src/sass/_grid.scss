@@ -18,7 +18,7 @@
 
 ._col {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 $padding-column;
   box-sizing: border-box;
   @for $i from 3 to 13 {
     &-sm-#{$i},

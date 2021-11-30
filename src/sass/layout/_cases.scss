@@ -1,0 +1,43 @@
+@import "../vars";
+
+.cases {
+  margin-bottom: 30px;
+  padding: 0 $padding-column;
+  box-sizing: border-box;
+  &-box {
+    border-radius: 12px;
+    background-color: $grey-bg-color;
+    overflow: hidden;
+  }
+  &-item {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    border-bottom: 1px solid $s-text-color;
+    border-right: 1px solid $s-text-color;
+    &:first-child {
+      min-height: 255px;
+    }
+    &:nth-child(3n+3) {
+      border-right: none;
+    }
+  }
+  &-caption {
+    padding: $padding-column;
+    color: $accept-color;
+    border-bottom: 1px solid $s-text-color;
+  }
+  &-title {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding: $padding-column;
+    color: $main-soft-color;
+  }
+  &-tag {
+    padding: 0 $padding-column $padding-column;
+    color: $grey-text-color;
+  }
+}

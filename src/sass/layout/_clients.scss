@@ -1,0 +1,61 @@
+@import "../vars";
+
+.clients {
+  &-caption {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &-item {
+    min-height: 120px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &._hillel {
+      background-color: #1C4280;
+      background-image: url(../images/hillel-logo.png);
+    }
+    &._wanna-biz {
+      background-color: #143646;
+      background-image: url(../images/WannaBiz.png);
+    }
+    &._tapgerine {
+      background-color: #F48B30;
+      background-image: url(../images/Targerine.png);
+    }
+    &._3d-look {
+      background-color: #9E4DC3;
+      background-image: url(../images/3DLook.png);
+    }
+    &._orangear {
+      background-color: #FD9339;
+      background-image: url(../images/Corangear.png);
+    }
+    &._adtelligent {
+      background-color: #E2E2E4;
+      background-image: url(../images/adtelligent.png);
+    }
+    &._clickkly {
+      background-color: #C71C36;
+      background-image: url(../images/clickkly.png);
+    }
+    &._ecolease {
+      background-color: #DCF3F9;
+      background-image: url(../images/ecolease.png);
+    }
+    &._infratek {
+      background-color: #EAEAEA;
+      background-image: url(../images/infratek.png);
+    }
+    &._city-park {
+      background-color: #282240;
+      background-image: url(../images/park.png);
+    }
+    &._art-print {
+      background-color: #1D4568;
+      background-image: url(../images/art-print.png);
+    }
+    &._ultimate-card {
+      background-color: #000;
+      background-image: url(../images/ultimate-card.png);
+    }
+  }
+}

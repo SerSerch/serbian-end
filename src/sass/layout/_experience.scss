@@ -1,0 +1,96 @@
+@import "../vars";
+
+.experience {
+  padding: 80px 0;
+  align-items: center;
+  &-services {
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    background-image: $gradient-2;
+    margin-bottom: 60px;
+  }
+  &-services:before {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 10px;
+    background-color: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+    margin: 0 auto;
+  }
+  &-services:after {
+    content: '';
+    display: block;
+    height: 10px;
+    background-color: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+    margin: 0 auto;
+  }
+  &-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: -22px;
+      bottom: 0;
+      width: 4px;
+      background-color: $grey-separator-color;
+    }
+  }
+  &-links {
+    display: block;
+    position: relative;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: right;
+    color: $grey-text-color;
+    margin-bottom: 21px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &._active,
+    &:active,
+    &:hover,
+    &:focus {
+      color: $accept-color;
+      background: $gradient-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -42px;
+        bottom: 0;
+        width: 4px;
+        background-color: $accept-color;
+      }
+    }
+  }
+  &-right {
+    padding-left: 60px;
+  }
+  &-caption {
+    margin-bottom: 20px;
+    color: $s-text-color;
+  }
+  &-text {
+    font-size: 21px;
+    line-height: 30px;
+    color: $s-text-color;
+  }
+}

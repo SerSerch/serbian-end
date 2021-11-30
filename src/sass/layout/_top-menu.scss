@@ -1,7 +1,7 @@
 @import "../vars";
 
 .top-menu {
-  position: relative;
+  position: absolute;
   z-index: 100;
   min-width: 320px;
   top: 50px;
@@ -49,23 +49,8 @@
       display: flex;
       align-items: center;
       min-height: 24px;
-      position: relative;
-      padding-left: 26px;
       font-size: 16px;
       line-height: 19px;
-      box-sizing: border-box;
-      &:before {
-        display: block;
-        position: absolute;
-        content: '';
-        top: 50%;
-        left: 10px;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        transform: translateY(-50%);
-        background-color: $grey-separator-color;
-      }
     }
     &-phone {
       font-weight: 700;
@@ -141,7 +126,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: $md) {
   .top-menu {
     top: 20px;
     &-row {

@@ -1,45 +1,88 @@
 @import "../vars";
 
 .team {
-  margin-bottom: 80px;
-  & .wrap-col-small {
-    padding: 0;
-  }
-  &-contacts {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 2px solid #E6E6F0;
-    padding: 10px 0 20px;
-    margin-bottom: 40px;
-  }
-  & .contact-link {
-    margin-left: 26px;
+  margin-bottom: 41px;
+  &-slider {
     position: relative;
+    padding-bottom: 36px;
+    overflow: hidden;
   }
-  & .contact-link:nth-child(2)::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #E6E6F0;
+  &-slider-item {
+    display: none;
+    min-height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: $grey-bg-color;
+    margin: 0 $padding-column;
+    &._active {
+      display: flex;
+    }
+  }
+  &-image-box {
+    min-height: 100%;
+    min-width: 413px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  &-caption {
+    position: relative;
+    padding-right: 12px;
+    margin-bottom: 3px;
+    color: $link-color;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      width: 7px;
+      height: 12px;
+      background-image: url(../images/Caption-Icon2.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+  }
+  &-hero {
+    margin-bottom: 20px;
+  }
+  &-name {
+    font-size: 18px;
+    line-height: 21px;
+    color: $grey-text-color;
+    margin-bottom: 5px;
+  }
+  &-members {
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey-text-color;
+  }
+  &-slider-pagination-row {
+    display: flex;
     position: absolute;
-    top: 40%;
-    right: -15px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
   }
-  & .contact-link:nth-child(2)::before {
-    content: "";
-    width: 6px;
-    height: 6px;
+  &-slider-pagination {
+    width: 16px;
+    height: 16px;
+    background-color: $link-color;
+    opacity: 0.2;
+    margin-right: 14px;
     border-radius: 50%;
-    background-color: #E6E6F0;
-    position: absolute;
-    top: 40%;
-    left: -15px;
-  }
-  &-sector {
-    max-width: 864px;
-    margin: 0 auto 80px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &._active {
+      opacity: 1;
+    }
   }
 }
-
