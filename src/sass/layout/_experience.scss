@@ -94,3 +94,29 @@
     color: $s-text-color;
   }
 }
+
+@media (max-width: $md) {
+  .experience {
+    position: relative;
+    padding-bottom: 36px;
+    margin-bottom: 45px;
+    &-left {
+      align-items: flex-start;
+      &:before {
+        display: none;
+      }
+    }
+    &-links {
+      display: none;
+      &._active {
+        display: block;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &-right {
+      padding: 0 $padding-column;
+    }
+  }
+}
